@@ -109,7 +109,7 @@ function showCartItems() {
             var cartItem = document.createElement('div');
             cartItem.innerHTML = '<img src="' + item.image + '" alt="' + item.name + '" class="cart-image">' +
                 '<p>Name: ' + item.name + '</p>' +
-                '<p>Price: $' + item.price + '</p>';
+                '<p>Price: ' + item.price + '</p>';
             cartContainer.appendChild(cartItem);
         });
     } else {
