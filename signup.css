@@ -1,0 +1,79 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap');
+body{
+    
+    background-image:url(lobster.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+
+.signup{
+    position: absolute;
+    margin-right: 50px;
+    padding: 70px;
+    width:45%;
+ 
+    
+    margin-top: 50px;
+    transform: translate(-50%,-50%);
+    top:47%;
+    left: 50%;
+    border-style: groove;
+    border:4px solid black;
+    border-radius:10%;
+    background-color: white;
+   
+}
+
+[type="text"],[type="password"],[type="number"]{
+    border-radius: 10px;
+    padding-right: 40%;
+    padding-bottom: 20px;
+    font-size: medium;
+    
+}
+.luck{
+    text-align:justify;
+    font-weight: bolder;
+   font-size: large;
+    font-family: Mukta Mahee,sans-serif;
+    color: black;
+
+}
+.luck a{
+    text-decoration: none;
+    font-weight: bolder;
+}
+.sign{
+    padding-left: 20%;
+}
+
+
+[type="submit"]{
+    color:white;
+    padding:10px 33%;
+    background-color: green;
+    font-family: Signika, sans-serif;
+    font-size:medium;
+    border-radius: 10px;
+    border:none;
+    text-align: center;
+    
+}
+label{
+    font-weight:900;
+    font-size: larger;
+    font-family: Mukta Mahee, sans-serif;
+    color:black;
+}
+.stat{
+    text-align: left;
+    font-weight: bolder;
+    font-size:xx-large;
+    font-family: Mukta Mahee,sans-serif;
+    color: black;
+
+}
