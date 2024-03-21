@@ -99,7 +99,7 @@ html {
    
 }
 
-[type="text"],[type="password"],[type="number"]{
+[type="text"],[type="password"],[type="tel"]{
     border-radius: 10px;
     padding-right: 40%;
     padding-bottom: 20px;
