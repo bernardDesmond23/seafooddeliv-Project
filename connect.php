@@ -17,6 +17,4 @@ if($result){
 else {
     die(mysqli_error($connect));
 }
-
-
 ?>
