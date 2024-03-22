@@ -7,5 +7,5 @@ $connect=mysqli_connect($server,$name,$password,$database);
 if(!$connect){
  die(mysqli_connect());
 }
-
 ?>
+

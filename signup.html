@@ -7,21 +7,34 @@
     <link rel="stylesheet" href="signup.css">
 </head>
 <body>
+    <nav>
+        <ul class="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="About US.html">About US</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="form1.html">Contact Us</a></li>
+        <li><a href="signup.html">Register</a></li>
+        
+
+        </ul>
+    </nav>
     <div class="signup">
       
-   <form class="sign" method="post" action="signup.php">
+    <form  class="sign" action="signup.php" method="POST">
    
     <h2 class="stat">CREATE AN ACCOUNT</h2>
-   <label for="username">Username</label><br>
-    <input type="text" name="username"><br>
-    <label for="password">Password</label><br>
-    <input type="password" name="password"><br>
-    <label>Telephone Contact</label><br>
-    <input type="number" name="number"><br>
-    <label for="location">Location: </label><br>
-    <input type="text" name="location"><br>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+   <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+   <label for="number">Telephone Number:</label>
+    <input type="tel" id="number" name="number" required>
+   <label for="location">Location:</label>
+    <input type="text" id="location" name="location" required>
+   <br>
     <br>
     <input type="submit" value="Register" name="submit">
+    <a href="login.html">login</a>
 </form>
 </div>
 </body>
