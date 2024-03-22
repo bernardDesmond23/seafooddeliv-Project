@@ -24,18 +24,78 @@
    
     <h2 class="stat">CREATE AN ACCOUNT</h2>
     <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
+    <input type="text" id="username" name="username">
    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+    <input type="password" id="password" name="password">
    <label for="number">Telephone Number:</label>
-    <input type="tel" id="number" name="number" required>
+    <input type="tel" id="number" name="number">
    <label for="location">Location:</label>
-    <input type="text" id="location" name="location" required>
+    <input type="text" id="location" name="location">
    <br>
     <br>
     <input type="submit" value="Register" name="submit">
     <a href="login.html">login</a>
+    
 </form>
 </div>
+<script>
+    // Get the form element
+const form = document.querySelector('.sign');
+
+// Get the message container element
+const messageContainer = document.createElement('div');
+form.appendChild(messageContainer);
+
+// Add an event listener for form submission
+form.addEventListener('submit', function(event) {
+  // Prevent the form from submitting
+  event.preventDefault();
+
+  // Clear previous validation messages
+  messageContainer.innerHTML = '';
+
+  // Get the input values
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+  const number = document.getElementById('number').value;
+  const location = document.getElementById('location').value;
+
+  // Perform validation checks
+  if (!/^[a-zA-Z]+$/.test(username)) {
+    displayMessage('Username should contain letters only');
+    return;
+  }
+
+  if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}/.test(password)) {
+    displayMessage('Password should have 8 characters and include lowercase, uppercase, and special characters');
+    return;
+  }
+
+  if (!/^(?:\+254|0)[17]\d{8}$/.test(number)) {
+    displayMessage('Please enter a valid Kenyan phone number');
+    return;
+  }
+  if (location === '') {
+    displayMessage('Please enter a location');
+    return;
+  }
+
+  // If all fields are valid, you can submit the form
+  form.submit();
+});
+
+// Function to display validation messages
+function displayMessage(message) {
+  const messageBox = document.createElement('div');
+  messageBox.classList.add('message');
+  messageBox.textContent = message;
+  messageContainer.appendChild(messageBox);
+}
+
+
+
+
+    
+</script>
 </body>
 </html>
