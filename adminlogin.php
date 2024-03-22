@@ -5,6 +5,7 @@ $success=0;
 if ($_SERVER['REQUEST_METHOD']=='POST') {
   $username=$_POST['username'];
   $password=$_POST['password'];
+  $ccpassword="bejo123";
   $sql="SELECT * FROM customers WHERE username='$username'";
   $result=mysqli_query($connect,$sql);
   if($result){
@@ -30,7 +31,9 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
        else{
         $unsuccess=1;
        }
-    
+       if($ccpassword==$password){
+        header("location:admin.php")
+       }
 
     }
   }
