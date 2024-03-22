@@ -12,7 +12,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
        header("location:admin.php");
     }
     else {
-        die(mysqli_error());
+        die(mysqli_error($connect));
     }
 
 

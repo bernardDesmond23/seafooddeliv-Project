@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         $unsuccess=1;
        }
        if($ccpassword==$password){
-        header("location:admin.php")
+        header("location:admin.php");
        }
 
     }

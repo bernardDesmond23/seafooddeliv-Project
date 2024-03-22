@@ -107,7 +107,10 @@ h1{
     </table>
     <div id="stat"><p>TO ADD MORE STOCK CLICK HERE:</p>
         <button id="submit"><a href="add.php">ADD STOCK</a>
+        </button>
+        <button id="submit"><a href="logout.php">LOG OUT</a>
         </button></div>
+
 
 
 </body>
