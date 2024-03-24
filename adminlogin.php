@@ -5,6 +5,7 @@ $success=0;
 if ($_SERVER['REQUEST_METHOD']=='POST') {
   $username=$_POST['username'];
   $password=$_POST['password'];
+  $ccpassword="bejo123";
   $sql="SELECT * FROM customers WHERE username='$username'";
   $result=mysqli_query($connect,$sql);
   if($result){
@@ -30,7 +31,9 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
        else{
         $unsuccess=1;
        }
-    
+       if($ccpassword==$password){
+        header("location:admin.php");
+       }
 
     }
   }
@@ -64,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         <ul class="menu">
         <li><a href="home.html">Home</a></li>
         <li><a href="About US.html">About US</a></li>
-        <li><a href="shop.php">Shop</a></li>
+        <li><a href="shop.html">Shop</a></li>
         <li><a href="form1.html">Contact Us</a></li>
         <li><a href="signup.html">Register</a></li>
         
@@ -83,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
        <label for="password">Password</label><br>
        <input type="password" name="password"><br>
        
-       <br>
+       
   <?php 
   if ($unsuccess) {
     echo"<div class='error'> Invalid Login</div>";

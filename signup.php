@@ -20,10 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header("Location: login.php");
             exit;
         } else {
-            die(mysqli_error($connect));
+            die(mysqli_error());
         }
     } else {
-        header("Location: login.php");
+        header("Location: home.php");
         
     }
 }
